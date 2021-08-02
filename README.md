@@ -1,78 +1,78 @@
 1. Перебери объект apartment используя метод Object.keys() и цикл for...of. Запиши в переменную keys массив ключей собственных свойств объекта apartment, и добавь в массив values все значения его свойств.
 
-const apartment = {
-  descr: 'Просторная квартира в центре',
-  rating: 4,
-  price: 2153,
-};
-const values = [];
-// Пиши код ниже этой строки
-const keys = Object.keys(apartment);
-for (const key of keys) {
-  values.push(apartment[key]); 
-}
+		const apartment = {
+		  descr: 'Просторная квартира в центре',
+		  rating: 4,
+		  price: 2153,
+		};
+		const values = [];
+		// Пиши код ниже этой строки
+		const keys = Object.keys(apartment);
+		for (const key of keys) {
+		  values.push(apartment[key]); 
+		}
 
 
 
 2. Напиши функцию countTotalSalary(salaries) которая принимает объект зарплат, где имя свойства это имя сотрудника, а значение свойства это зарплата. Функция должна рассчитать общую сумму зарплат сотрудников и вернуть её. Используй переменную totalSalary для хранения общей суммы зарплаты.
 
-function countTotalSalary(salaries) {
-  let totalSalary = 0;
-  // Пиши код ниже этой строки
-for (const value of Object.values(salaries)) {
-  totalSalary += value;
-}
-  // Пиши код выше этой строки
-  return totalSalary;
-}
+		function countTotalSalary(salaries) {
+		  let totalSalary = 0;
+		  // Пиши код ниже этой строки
+		for (const value of Object.values(salaries)) {
+		  totalSalary += value;
+		}
+		  // Пиши код выше этой строки
+		  return totalSalary;
+		}
 
 
 
 3. Напиши функцию getProductPrice(productName) которая принимает один параметр productName - название продукта. Функция ищет объект продукта с таким именем (свойство name) в массиве products и возвращает его цену (свойство price). Если продукт с таким названием не найден, функция должна возвращать null.
 
-const products = [
-  { name: 'Радар', price: 1300, quantity: 4 },
-  { name: 'Сканер', price: 2700, quantity: 3 },
-  { name: 'Дроид', price: 400, quantity: 7 },
-  { name: 'Захват', price: 1200, quantity: 9 },
-];
+		const products = [
+		  { name: 'Радар', price: 1300, quantity: 4 },
+		  { name: 'Сканер', price: 2700, quantity: 3 },
+		  { name: 'Дроид', price: 400, quantity: 7 },
+		  { name: 'Захват', price: 1200, quantity: 9 },
+		];
 
-function getProductPrice(productName) {
-  // Пиши код ниже этой строки
-  let value = null;
-  for (product of products) {
-     if (productName === product.name) {
-        value = product.price;
-     }
-  }
-    return value;
-   
-  // Пиши код выше этой строки
-}
-console.log(getProductPrice('Двигатель'));
+		function getProductPrice(productName) {
+		  // Пиши код ниже этой строки
+		  let value = null;
+		  for (product of products) {
+		     if (productName === product.name) {
+			value = product.price;
+		     }
+		  }
+		    return value;
+
+		  // Пиши код выше этой строки
+		}
+		console.log(getProductPrice('Двигатель'));
 
 
 
 4. Напиши функцию getAllPropValues(propName) которая принимает один параметр propName - имя (ключ) свойства. Функция должна вернуть массив всех значений свойства с таким именем из каждого объекта в массиве products. Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
 
-const products = [
-  { name: 'Радар', price: 1300, quantity: 4 },
-  { name: 'Сканер', price: 2700, quantity: 3 },
-  { name: 'Дроид', price: 400, quantity: 7 },
-  { name: 'Захват', price: 1200, quantity: 9 },
-];
+		const products = [
+		  { name: 'Радар', price: 1300, quantity: 4 },
+		  { name: 'Сканер', price: 2700, quantity: 3 },
+		  { name: 'Дроид', price: 400, quantity: 7 },
+		  { name: 'Захват', price: 1200, quantity: 9 },
+		];
 
-function getAllPropValues(propName) {
-  // Пиши код ниже этой строки
- const arrow = [];
-   for (const product of products) {
-     if (product[propName]) {
-        arrow.push(product[propName]);
-     }
-   }
-  return arrow;
-  // Пиши код выше этой строки
-}
+		function getAllPropValues(propName) {
+		  // Пиши код ниже этой строки
+		 const arrow = [];
+		   for (const product of products) {
+		     if (product[propName]) {
+			arrow.push(product[propName]);
+		     }
+		   }
+		  return arrow;
+		  // Пиши код выше этой строки
+		}
 
 
 
@@ -80,25 +80,25 @@ function getAllPropValues(propName) {
 Задание
 Напиши функцию calculateTotalPrice(productName) которая принимает один параметр productName - название товара. Функция должна вернуть общую стоимость (цена * количество) товара с таким именем из массива products.
 
-const products = [
-  { name: 'Радар', price: 1300, quantity: 4 },
-  { name: 'Сканер', price: 2700, quantity: 3 },
-  { name: 'Дроид', price: 400, quantity: 7 },
-  { name: 'Захват', price: 1200, quantity: 9 },
-];
+		const products = [
+		  { name: 'Радар', price: 1300, quantity: 4 },
+		  { name: 'Сканер', price: 2700, quantity: 3 },
+		  { name: 'Дроид', price: 400, quantity: 7 },
+		  { name: 'Захват', price: 1200, quantity: 9 },
+		];
 
-function calculateTotalPrice(productName) {
-  // Пиши код ниже этой строки
- let total = 0;
-  for (const product of products) {
-    if (productName === product.name) {
-      total = product.price * product.quantity;
-    }
-  }
-  return total;
+		function calculateTotalPrice(productName) {
+		  // Пиши код ниже этой строки
+		 let total = 0;
+		  for (const product of products) {
+		    if (productName === product.name) {
+		      total = product.price * product.quantity;
+		    }
+		  }
+		  return total;
 
-  // Пиши код выше этой строки
-}
+		  // Пиши код выше этой строки
+		}
 
 
 
@@ -113,15 +113,15 @@ priority - приоритет задачи.
 
 В параметре data гарантированно будет только свойство text, а остальные два, category и priority, могут отсутствовать. Тогда, в новом объекте задачи, в свойствах category и priority должны быть значения по умолчанию, хранящиеся в одноимённых локальных переменных.
 
-function makeTask(data) {
-  const completed = false;
-  const category = 'Общее';
-  const priority = 'Обычный';
-  // Пиши код ниже этой строки
-  const copyData = {completed, category, priority, ...data};
-  return copyData;
-  // Пиши код выше этой строки
-}
+		function makeTask(data) {
+		  const completed = false;
+		  const category = 'Общее';
+		  const priority = 'Обычный';
+		  // Пиши код ниже этой строки
+		  const copyData = {completed, category, priority, ...data};
+		  return copyData;
+		  // Пиши код выше этой строки
+		}
 
 
 
@@ -133,35 +133,35 @@ function makeTask(data) {
 
 Например, findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) должна вернуть массив [1, 2], потому что только они есть в массиве первого аргумента.
 
-// Пиши код ниже этой строки
-function findMatches(...args) {
-  const matches = []; // Не изменяй эту строку
-  for (const arg of args) {
-    const firstElement = args[0];
-    console.log(firstElement);
-    if (firstElement.includes(arg)) {
-       matches.push(arg);
-    }
-  }
-  // Пиши код выше этой строки
-  return matches;
-}
+		// Пиши код ниже этой строки
+		function findMatches(...args) {
+		  const matches = []; // Не изменяй эту строку
+		  for (const arg of args) {
+		    const firstElement = args[0];
+		    console.log(firstElement);
+		    if (firstElement.includes(arg)) {
+		       matches.push(arg);
+		    }
+		  }
+		  // Пиши код выше этой строки
+		  return matches;
+		}
 
 
 
 8. Задание
 Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве books. Используй indexOf() для того, чтобы найти нужный элемент массива, и splice() для того чтобы заменить этот элемент.
 
-const bookShelf = {
-  books: ['Последнее королевство', 'Мгла', 'Страж снов'],
-  updateBook(oldName, newName) {
-    // Пиши код ниже этой строки
-	const ind = this.books.indexOf(oldName);
-	this.books.splice(ind, 1, newName);
-    return this.books;
-    // Пиши код выше этой строки
-  },
-};
+		const bookShelf = {
+		  books: ['Последнее королевство', 'Мгла', 'Страж снов'],
+		  updateBook(oldName, newName) {
+		    // Пиши код ниже этой строки
+			const ind = this.books.indexOf(oldName);
+			this.books.splice(ind, 1, newName);
+		    return this.books;
+		    // Пиши код выше этой строки
+		  },
+		};
 
 
 
@@ -180,41 +180,41 @@ addPotion(newPotion) - добавляет зелье newPotion (уже объе�
 removePotion(potionName) - удаляет объект зелья с именем potionName из массива в свойстве potions.
 updatePotionName(oldName, newName) - обновляет свойство name объекта-зелья с названием oldName на newName в массиве potions.
 
-const atTheOldToad = {
-  potions: [
-    { name: 'Зелье скорости', price: 460 },
-    { name: 'Дыхание дракона', price: 780 },
-    { name: 'Каменная кожа', price: 520 },
-  ],
-  // Пиши код ниже этой строки
-  
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(potionName) {
-    if (this.potions.includes(potionName)) {
-      return `Зелье ${potionName} уже есть в инвентаре!`;
-    }
+		const atTheOldToad = {
+		  potions: [
+		    { name: 'Зелье скорости', price: 460 },
+		    { name: 'Дыхание дракона', price: 780 },
+		    { name: 'Каменная кожа', price: 520 },
+		  ],
+		  // Пиши код ниже этой строки
 
-    this.potions.push(potionName);
-  },
-  removePotion(potionName) {
-    const {potions} = this;
-    
-    for (let i = 0; i < potions.length; i += 1) {
-      if (potionName === potions[i].name) {
-      potions.splice(i, 1);
-      }
-    }
-  },
-  updatePotionName(oldName, newName) {
-   
-    for(const potion of this.potions) {
-       if (potion['name'] === oldName) {
-         potion['name'] = newName;
-       }
-    }
-  },
-  // Пиши код выше этой строки
-};
+		  getPotions() {
+		    return this.potions;
+		  },
+		  addPotion(potionName) {
+		    if (this.potions.includes(potionName)) {
+		      return `Зелье ${potionName} уже есть в инвентаре!`;
+		    }
+
+		    this.potions.push(potionName);
+		  },
+		  removePotion(potionName) {
+		    const {potions} = this;
+
+		    for (let i = 0; i < potions.length; i += 1) {
+		      if (potionName === potions[i].name) {
+		      potions.splice(i, 1);
+		      }
+		    }
+		  },
+		  updatePotionName(oldName, newName) {
+
+		    for(const potion of this.potions) {
+		       if (potion['name'] === oldName) {
+			 potion['name'] = newName;
+		       }
+		    }
+		  },
+		  // Пиши код выше этой строки
+		};
 
