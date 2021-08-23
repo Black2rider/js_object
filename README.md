@@ -7,12 +7,24 @@
 		  let propCount = 0;
 		  // Change code below this line
 		 for (const key in object) {
-		   if (object.hasOwnProperty(key)) {
-		     propCount = Object.keys(object).length;
-		   }
-		 }
+		    if (object.hasOwnProperty(key)) {
+		      propCount += 1;
+		    }
+		  }
 		  // Change code above this line
 		  return propCount;
+		}
+		
+		
+		function countProps(object) {
+		  // Change code below this line
+		  let propCount = 0;
+		  const keys = Object.keys(object);
+		  for (const key of keys) {
+		      propCount = keys.length;
+		  }
+		  return propCount;
+		  // Change code above this line
 		}
 
 
