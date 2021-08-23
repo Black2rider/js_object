@@ -1,4 +1,23 @@
-1. Перебери объект apartment используя метод Object.keys() и цикл for...of. Запиши в переменную keys массив ключей собственных свойств объекта apartment, и добавь в массив values все значения его свойств.
+1. Задача. Подсчёт свойств
+Задание
+Напиши функцию countProps(object), которая считает и возвращает количество собственных свойств объекта в параметре object. Используй переменную propCount для хранения количества свойств объекта.
+
+
+    		function countProps(object) {
+		  let propCount = 0;
+		  // Change code below this line
+		 for (const key in object) {
+		   if (object.hasOwnProperty(key)) {
+		     propCount = Object.keys(object).length;
+		   }
+		 }
+		  // Change code above this line
+		  return propCount;
+		}
+
+
+
+2. Перебери объект apartment используя метод Object.keys() и цикл for...of. Запиши в переменную keys массив ключей собственных свойств объекта apartment, и добавь в массив values все значения его свойств.
 
 		const apartment = {
 		  descr: 'Просторная квартира в центре',
