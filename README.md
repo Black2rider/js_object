@@ -49,11 +49,12 @@
 
 		function countTotalSalary(salaries) {
 		  let totalSalary = 0;
-		  // Пиши код ниже этой строки
-		for (const value of Object.values(salaries)) {
-		  totalSalary += value;
-		}
-		  // Пиши код выше этой строки
+		  // Change code below this line
+		  const keys = Object.values(salaries);
+		  for (const key of keys) {
+		    totalSalary += key; 
+		  }
+		  // Change code above this line
 		  return totalSalary;
 		}
 
